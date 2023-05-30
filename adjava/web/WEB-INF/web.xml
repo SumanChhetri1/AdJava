@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	 version="3.1">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <servlet>
+        <servlet-name>GenericServl</servlet-name>
+        <servlet-class>Servlet.GenericServl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GenericServl</servlet-name>
+        <url-pattern>/ab</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>HttpServl</servlet-name>
+        <servlet-class>Servlet.HttpServl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HttpServl</servlet-name>
+        <url-pattern>/abb</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>FirstServlet</servlet-name>
+        <servlet-class>Cookies.FirstServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FirstServlet</servlet-name>
+        <url-pattern>/firstsevlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SecondServlet</servlet-name>
+        <servlet-class>Cookies.SecondServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SecondServlet</servlet-name>
+        <url-pattern>/secondservlet</url-pattern>
+    </servlet-mapping>
+    
+<!--   for session-->
+<servlet>
+        <servlet-name>FirstServlet</servlet-name>
+        <servlet-class>Session.FirstServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FirstServlet</servlet-name>
+        <url-pattern>/firstsevletsess</url-pattern>
+    </servlet-mapping>
+<servlet>
+        <servlet-name>SecondServlet</servlet-name>
+        <servlet-class>Session.SecondServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SecondServlet</servlet-name>
+        <url-pattern>/secondservletsess</url-pattern>
+    </servlet-mapping>
+<!--    Mini crud-->
+<servlet>
+        <servlet-name>MiniCrud</servlet-name>
+        <servlet-class>Project.MiniCrud</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MiniCrud</servlet-name>
+        <url-pattern>/minicrud</url-pattern>
+    </servlet-mapping>
+</web-app>
